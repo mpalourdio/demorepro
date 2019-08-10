@@ -27,7 +27,6 @@ class MyControllerTest {
     private MockMvc mvc;
 
     @Test
-    //expected exception won't work here because the exception is annotated wit @ResponseStatus
     void testController() throws Exception {
         mvc.perform(get("/test"))
                 .andExpect(content().string("[\"hello world\"]"))
